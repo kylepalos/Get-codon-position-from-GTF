@@ -1,6 +1,6 @@
 # Get-codon-position-from-GTF
 
-I may be reinventing the wheel or not taking the optimal approach but sometimes I want to associate a specific genomic position (e.g., DNA or RNA methlyation site) with the codon position (i.e., first, second, third or A/P/E site.)
+I may be reinventing the wheel or not taking the optimal approach but sometimes I want to associate specific genomic position (e.g., splice-sites or RNA methlyation sites) with their codon position (i.e., first, second, third or A/P/E site.)
 
 I couldn't find a great way to do this en-masse for hundreds/thousands of sites at a time (i.e., in preparation for bedtools intersect.)
 
@@ -21,10 +21,14 @@ and outputs:
 .
 ```
 
-I did a lot of spot checking but it appears to handle splicing and negative strand transcripts properly.
+I did a lot of spot checking and it appears to handle splicing and negative strand transcripts properly.
 
 Just run:
 
 ```
 python super_cool.gtf hopefully_correct_codon_positions.bed
 ```
+
+Be aware that your output is likely to be large - every CDS nucleotide position will end up in the bed file.
+
+My GTF with 286,067 CDS lines made a 3.2GB output bed file.
