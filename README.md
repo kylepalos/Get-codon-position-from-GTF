@@ -26,7 +26,7 @@ I did a lot of spot checking and it appears to handle splicing and negative stra
 Just run:
 
 ```
-python get_codon_position_from_GTF.py super_cool.gtf codon_positions.bed
+python get_codon_position_from_gtf.py super_cool.gtf codon_positions.bed
 ```
 
 Be aware that your output is likely to be large - every CDS nucleotide position will end up in the bed file.
